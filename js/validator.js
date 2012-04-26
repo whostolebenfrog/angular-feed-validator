@@ -5,4 +5,10 @@ function ValidatorCtrl($scope) {
     ];
     $scope.passed = 0;
     $scope.failed = 0;
+
+    $scope.progressHidden = false;
+    $scope.progressAmount = 40;
+
+    $scope.validateAll = function() {
+    };
 }

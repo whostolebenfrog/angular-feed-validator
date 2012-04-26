@@ -14,7 +14,26 @@
 </head>
 <body>
     <div class="span-12" ng-controller="ValidatorCtrl">
+        <br>
+
         <h2>Feed.validator - passed [{{passed}}] failed [{{failed}}]</h2>
+
+        <hr>
+
+        <form class="form-horizontal">
+            <div ng-repeat="feed in feeds">
+                <input type="text" class="span4" ng-model="feed.uri" /> 
+                <span>{{feed.desc}}</span>
+            </div>
+        </form>
+
+        <button class="btn btn-info" ng-click="validateAll()"><i class="icon-leaf"></i> Validate All</button>
+
+        <br><br>
+
+        <div class="progress progress-striped active progress-hidden-{{progressHidden}}">
+            <div class="bar" style="width: {{progressAmount}}%;"></div>
+        </div>
     </div>
 </body>
 </html>
